@@ -12,4 +12,13 @@ const { URL } = require("url");
 
 const urlStr = 'http://localhost:3000/users/list?role=admin&active=true#top';
 
+const myURL = new URL(urlStr);
+
+console.log("Hostname:", myURL.hostname);
+console.log("Pathname:", myURL.pathname);
+console.log("Protocol:", myURL.protocol);
+console.log("Query:", myURL.search);
+console.log("Hash:", myURL.hash);
+
+
 // write your code here

@@ -7,5 +7,15 @@
 // Run: node ex9.js   (test it with the browser and Postman / Thunder Client)
 
 const http = require("http");
+const PORT=3000;
+http.createServer((req, res) => {
+    if(req.url==="/hello" && req.method==="GET"){
+        res.end("Hello from GET");
+    } else if(req.url==="/hello" && req.method==="POST"){
+        res.end("Hello from POST");
+    } else {
+        res.end("Not supported");
+    }
+}).listen(PORT);
 
 // write your code here

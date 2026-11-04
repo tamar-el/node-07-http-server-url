@@ -10,4 +10,15 @@
 
 const http = require("http");
 
+const PORT=3000;
+http.createServer((req, res) => {
+    if(req.method=="POST"&& req.headers['content-type']==="application/json"){
+        res.end("JSON accepted");
+    } else {
+        res.end("Unsupported request");
+    }
+    
+
+}).listen(PORT);
+
 // write your code here

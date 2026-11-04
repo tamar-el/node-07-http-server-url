@@ -6,4 +6,9 @@
 
 const http = require("http");
 
+http.createServer((req,res)=>{
+    res.end("You used method: "+req.method);
+
+}).listen(3000);
+
 // write your code here
